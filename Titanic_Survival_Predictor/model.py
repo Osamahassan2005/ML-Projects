@@ -105,7 +105,8 @@ def pridict():
 menu=st.sidebar.radio('Navigation', ['Survival Simulator','Voyage insights','Captain confidence', 'The Manifest'])
 
 if menu == 'Survival Simulator':
-    st.subheader("Test the fate of a passenger aboard the Titanic")
+    st.subheader("Test the fate of a passenger aboard the Titanic") 
+    st.image(os.path.join(os.getcwd(), "Titanic_Survival_Predictor/image.jpeg)
     pclass = st.selectbox("Passenger Class", [1, 2, 3])
     sex = st.radio("Sex", ['male', 'female'])
     age = st.slider("Age", 1, 80, 25)
