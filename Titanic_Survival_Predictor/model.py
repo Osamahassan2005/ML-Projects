@@ -10,8 +10,11 @@ from sklearn.metrics import accuracy_score
 
 
 # load the data from csv file to Pandas DataFrame
-titanic_data = pd.read_csv('train.csv')
-
+try:
+    titanic_data = pd.read_csv('train.csv')
+except FileNotFoundError:
+    st.error("🚨 'train.csv' file not found. Please upload the dataset.")
+    st.stop()
 # number of rows and Columns
 #titanic_data.shape
 # getting some informations about the data
