@@ -106,7 +106,10 @@ menu=st.sidebar.radio('Navigation', ['Survival Simulator','Voyage insights','Cap
 
 if menu == 'Survival Simulator':
     st.subheader("Test the fate of a passenger aboard the Titanic") 
-    st.image(os.path.join(os.getcwd(), "Titanic_Survival_Predictor/image.jpeg)
+    try:
+       st.image(os.path.join(os.getcwd(), "Titanic_Survival_Predictor/image.jpeg")) 
+    except Exception as e:
+       st.error("Error while loading image:",e) 
     pclass = st.selectbox("Passenger Class", [1, 2, 3])
     sex = st.radio("Sex", ['male', 'female'])
     age = st.slider("Age", 1, 80, 25)
