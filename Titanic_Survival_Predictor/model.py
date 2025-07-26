@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score
 
 # load the data from csv file to Pandas DataFrame
 try:
-    titanic_data = pd.read_csv('train.csv')
+    titanic_data = pd.read_csv('Titanic_Survival_Predictor/train.csv')
 except FileNotFoundError:
     st.error("🚨 'train.csv' file not found. Please upload the dataset.")
     st.stop()
