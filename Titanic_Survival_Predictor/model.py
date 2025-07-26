@@ -109,7 +109,7 @@ if menu == 'Survival Simulator':
     try:
        st.image(os.path.join(os.getcwd(), "Titanic_Survival_Predictor/image.jpeg")) 
     except Exception as e:
-       st.error("Error while loading image:",e) 
+       st.error(f"Error while loading image: {e}") 
     pclass = st.selectbox("Passenger Class", [1, 2, 3])
     sex = st.radio("Sex", ['male', 'female'])
     age = st.slider("Age", 1, 80, 25)
