@@ -96,9 +96,9 @@ def pridict():
         prediction = model.predict(input_data)
         
         if prediction[0] == 1:
-            st.success("Survived :) ")
+            st.success("Survived 🎉")
         else:
-            st.error("Did not survive :( ")
+            st.error("Did not survive 💀 ")
 
 # Sidebar inputs
 
